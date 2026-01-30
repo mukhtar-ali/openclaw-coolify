@@ -24,6 +24,7 @@ fi
 
 # Ensure credentials dir exists
 mkdir -p "$MOLT_STATE/credentials"
+mkdir -p "$OPENCLAW_STATE/agents/main/sessions"
 chmod 700 "$MOLT_STATE/credentials"
 
 # Universal Permission Hardening (Runtime Fail-safe)
@@ -176,7 +177,7 @@ cat >"$CONFIG_FILE" <<EOF
   "agents": {
     "defaults": {
       "model": {
-        "primary": "anthropic:default",
+        "primary": "anthropic/anthropic:default",
         "fallbacks": []
       },
       "workspace": "/root/openclaw-workspace",
