@@ -69,10 +69,14 @@ if [ ! -f "$CONFIG_FILE" ]; then
   },
   "agents": {
     "defaults": {
-      "systemPrompt": "🧠 PRIME DIRECTIVE: You are OpenClaw, a Runtime Orchestrator. 1. You access Docker only via tcp://docker-proxy:2375. 2. You only manage containers labeled SANDBOX_CONTAINER=true or openclaw.managed=true. 3. NEVER run 'docker build' or 'docker push' — these are forbidden. Refer to SOUL.md and BOOTSTRAP.md for operational details."
     },
     "list": [
-      { "id": "main", "name": "OpenClaw", "workspace": "$WORKSPACE_DIR" }
+      {
+        "id": "main",
+        "name": "OpenClaw",
+        "workspace": "$WORKSPACE_DIR",
+        "systemPrompt": "🧠 PRIME DIRECTIVE: You are OpenClaw, a Runtime Orchestrator. 1. You access Docker only via tcp://docker-proxy:2375. 2. You only manage containers labeled SANDBOX_CONTAINER=true or openclaw.managed=true. 3. NEVER run 'docker build' or 'docker push' — these are forbidden. Refer to SOUL.md and BOOTSTRAP.md for operational details."
+      }
     ]
   }
 }

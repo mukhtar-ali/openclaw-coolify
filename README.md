@@ -23,9 +23,6 @@ Think of this Docker container not as an app, but as an **Office Building**.
 Your office never forgets, thanks to a 3-tier memory architecture:
 *   **The Filing Cabinet (`openclaw-workspace`)**: A persistent Docker Volume where agents write code, save files, and store heavy data. Survives restarts.
 *   **The Brain (Internal SQLite)**: OpenClaw's native transactional memory for conversations and facts.
-*   **The Library (Qdrant)**: A dedicated Vector Database (`qdrant:6333`) for advanced RAG.
-*   **The Newsroom (Miniflux)**: An RSS feed reader (`miniflux:8080`) backed by Postgres. Your agent can stay updated on tech news automatically.
-*   **The Archive (Linkding)**: A self-hosted bookmark manager (`linkding:9090`) to save important research, docs, and links.
 *   **Web Search (SearXNG)**: A private, tracking-free search engine (`searxng:8080`) for the agent's research.
 
 ### 3. The Security Vault
