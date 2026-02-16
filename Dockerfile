@@ -83,6 +83,8 @@ ENV BUN_INSTALL_NODE=0 \
     BUN_INSTALL="/data/.bun" \
     PATH="/usr/local/go/bin:/data/.bun/bin:/data/.bun/install/global/bin:$PATH"
 
+RUN mkdir -p /data/.bun
+
 # Install Bun
 RUN curl -fsSL https://bun.sh/install | bash
 
