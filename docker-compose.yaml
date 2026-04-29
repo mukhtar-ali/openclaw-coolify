@@ -11,6 +11,10 @@ services:
       context: .
       args:
         - OPENCLAW_BETA=${OPENCLAW_BETA:-false}
+    labels:
+        - "traefik.http.middlewares.openclaw-ws.headers.customrequestheaders.Connection=upgrade"
+        - "traefik.http.middlewares.openclaw-ws.headers.customrequestheaders.Upgrade=websocket"
+        - "traefik.http.routers.https-0-r4os0s8ww8ogg08owokkw-openclaw.middlewares=gzip,openclaw-ws"
     restart: on-failure:10
     ulimits:
       nofile:
