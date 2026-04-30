@@ -12,6 +12,8 @@ services:
       args:
         - OPENCLAW_BETA=${OPENCLAW_BETA:-false}
     restart: on-failure:10
+    extra_hosts:
+        - "host.docker.internal:host-gateway"
     ports:
         - "19222:9222"
     ulimits:
